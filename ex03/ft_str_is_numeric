@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int	ft_str_is_numeric(char *str);
+
+int main(void)
+{
+	return (0);
+}
+
+int ft_str_is_numeric(char *str)
+{
+	int i;
+	i = 0;
+	while(str[i] != '\0')
+	{
+		if(!(str[i] <= '0' && str[i] => '9'))
+		{
+			return(0);
+		} 
+		i++;
+	}
+	return (1)
+	
+}
+
+// What is if the string has just a null terminator? It would return a 1. So this condifition is met for empty string with only null terminatrl. 
+// But what about an empty string without a null terminator? The loop would not end I guess. We could add a condition like if(str[i] > 0 && str[i] <= 127) keep on going, otherwise esc and return 1, cause this is a string without Null Termminator
